@@ -201,7 +201,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-scale ~/Pictures/lilac.jpg
 
 # Wifi
-exec_always --no-startup-id nmcli device wifi connect "CJAG" password "Wrknplay2"
+exec_always --no-startup-id nmcli device wifi connect "wifiName" password "wifiPass"
 
 # Gestures
  exec --no-startup-id libinput-gestures-setup start
