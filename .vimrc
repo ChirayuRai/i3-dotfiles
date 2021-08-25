@@ -6,6 +6,8 @@ set nocompatible
 filetype off
 
 "Set the runtime path to include Vundle and initialize
+" Remember to run below command, and then PluginInstall
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -26,7 +28,7 @@ filetype plugin indent on
 
 " This plugin/colorscheme combo ensures that vim has the same 
 " colorscheme as whatever terminal is being run
-colorscheme wal
+colorscheme nord
 " Ensures airline is using raven theme
 let g:airline_theme='raven'
 
@@ -55,3 +57,5 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 " mapping F5 to compile and run whatever code I need based on file type
 autocmd filetype python nnoremap <F5> :w <bar> exec '!python '.shellescape('%')<CR>
 autocmd filetype java nnoremap <F5> :w <bar> exec '!javac '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
+nnoremap <silent> <F5> :!clear;gcc % -o % && ./%<CR>
+
